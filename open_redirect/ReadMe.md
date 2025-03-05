@@ -7,3 +7,18 @@ The application allows a user to specify a `next` URL, and it redirects the user
 
 ## Files:
 - `open_redirect_vulnerable_code.py`: The code demonstrating the vulnerable behavior.
+
+
+## Exploit process:
+1) Run the server:
+   ```
+   python3 open_redirect_vulnerable_code.py
+   ```
+2) Enter this url:
+   ```
+   http://localhost:5000/login
+   ```
+3) Modife "Next" parameter:
+   ```
+   http://localhost:5000/login?next=https://www.verylazytech.com
+   ```
